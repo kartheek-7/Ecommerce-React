@@ -1,7 +1,7 @@
 const data=[
         {
             id:1,
-            imageSrc: 'images/men/m1.jpg',
+            imageSrc: './images/men/m1.jpg',
             name: 'men',
             price: 1000,
         },
