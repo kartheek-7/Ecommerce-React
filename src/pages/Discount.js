@@ -9,7 +9,7 @@ const Discount = () => {
         <p className='para3'>Eco Fashion Style</p>
       </div>
       <div className='ImageContainer'>
-        <img src='images/model.png' alt='Discount' className='modelImage' />
+        <img src='/Ecommerce-React/images/model.png' alt='Discount' className='modelImage' />
       </div>
     </div>
   );
