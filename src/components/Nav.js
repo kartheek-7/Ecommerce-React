@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FiShoppingCart } from "react-icons/fi";
 import { MdAccountCircle } from "react-icons/md";
 import { CgMenu, CgClose } from "react-icons/cg";
+import { useCart } from './CartContext';
 import { Link } from 'react-router-dom';
 import '../styles/Nav.css';
 
@@ -11,6 +12,9 @@ function Navbar() {
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
+
+  const { cart } = useCart();
+  const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <div className="navbar">
@@ -43,18 +47,10 @@ function Navbar() {
         <li className="nav-link-item">
           <Link className="nav-link" to="/cart">
             <FiShoppingCart className='cartIcon' />
-            <span className='cart-total-item'>0</span>
+            <span className='cart-total-item'>{totalQuantity}</span>
           </Link>
         </li>
       </ul>
-
-      {/*<div className='mobile-menu-button' onClick={toggleMobileMenu}>
-        {mobileMenuOpen ? (
-          <CgClose name='close-outline' className='closeIcon' />
-        ) : (
-          <CgMenu name='menu-outline' className='outlineIcon' />
-        )}
-        </div>*/}
     </div>
   );
 }

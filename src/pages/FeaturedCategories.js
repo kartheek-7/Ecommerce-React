@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/CategoryCard.css'; // Correct the import statement to include the CSS file
+import '../styles/CategoryCard.css';
 import CategoryCard from '../components/CategoryCard';
 
 const FeaturedCategories = () => {

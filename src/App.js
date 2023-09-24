@@ -13,23 +13,20 @@ import Cart from './pages/Cart';
 const App = () => {
 
   return (
-    <Router basename="/Ecommerce-React">
-      <Nav />
-      <CartProvider>
-      <Routes>
-        
+    <CartProvider>
+      <Router basename="/Ecommerce-React">
+        <Nav />
+        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/men" element={<Men />} /> 
           <Route path="/women" element={<Women />} /> 
           <Route path="/kids" element={<Kids />} />
-        
-         
-        <Route path="/account" element={<Account />} /> 
-        <Route path="/cart" element={<Cart/>} />
-        <Route path="*" element={<Error />} />
-      </Routes>
-      </CartProvider>
-    </Router>
+          <Route path="/account" element={<Account />} /> 
+          <Route path="/cart" element={<Cart/>} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </Router>
+    </CartProvider>
   );
 };
 

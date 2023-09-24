@@ -2,14 +2,14 @@ const data=[
         {
             id:1,
             imageSrc: 'images/men/m1.jpg',
-            name: 'men',
-            price: 1000,
+            name: 'Coat',
+            price: 4000,
         },
         {
             id:2,
             imageSrc: './images/men/m2.jpg',
-            name: 'men',
-            price: 1000,
+            name: 'men premium',
+            price: 9000,
         },
         {
             id:3,
